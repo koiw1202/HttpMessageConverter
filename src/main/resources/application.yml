@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: webMvcConfigureTest
+
+
+
+server:
+  port: 8080
+
+springdoc:
+  title: F&B
+  version: 1.0
+  default-produces-media-type: application/json
+  default-consumes-media-type: application/json
+  swagger-ui:
+    path: /swagger
