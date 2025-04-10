@@ -37,7 +37,7 @@ public class WebConfig implements WebMvcConfigurer {
 
         testHttpMessageConverter.setSupportedMediaTypes(supportedMediaTypes);
 
-        converters.add(0 , testHttpMessageConverter);
+//        converters.add(0 , testHttpMessageConverter);
     }
 }
 

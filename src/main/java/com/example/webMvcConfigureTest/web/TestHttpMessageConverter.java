@@ -17,21 +17,6 @@ import java.io.*;
  */
 public class TestHttpMessageConverter extends AbstractHttpMessageConverter<Object> {
 
-
-//    @Override
-//    protected MyCustomData readInternal(Class<? extends MyCustomData> clazz, HttpInputMessage inputMessage)
-//            throws IOException {
-//
-//        System.out.println("=================================");
-//
-//        BufferedReader reader = new BufferedReader(new InputStreamReader(inputMessage.getBody()));
-//
-//        String line = reader.readLine();
-//        String[] fields = line.split(",");
-//        ByteArrayHttpMessageConverter
-//        return new MyCustomData(fields); // Convert CSV line into custom object
-//    }
-
     @Override
     protected boolean supports(Class<?> clazz) {
         return true;
@@ -42,11 +27,11 @@ public class TestHttpMessageConverter extends AbstractHttpMessageConverter<Objec
 
         System.out.println("111111111111111111111111111");
 
-        return null;
+        return inputMessage.getBody();
     }
 
     @Override
     protected void writeInternal(Object o, HttpOutputMessage outputMessage) throws IOException, HttpMessageNotWritableException {
-        System.out.println("22222222222222222222222222");
+
     }
 }
