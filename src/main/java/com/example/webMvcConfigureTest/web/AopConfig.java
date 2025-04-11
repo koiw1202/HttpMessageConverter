@@ -27,8 +27,8 @@ public class AopConfig {
     @Around("range()")
     public Object aopTest(ProceedingJoinPoint joinPoint) throws Throwable {
 
-        System.out.println("11 => " + joinPoint.getSignature().toShortString());
-        System.out.println("22 => " + joinPoint.getSignature().toString());
+//        System.out.println("11 => " + joinPoint.getSignature().toShortString());
+//        System.out.println("22 => " + joinPoint.getSignature().toString());
 
         Object result = joinPoint.proceed();
 
