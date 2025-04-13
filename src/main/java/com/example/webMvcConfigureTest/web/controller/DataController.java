@@ -2,12 +2,12 @@ package com.example.webMvcConfigureTest.web.controller;
 
 import com.example.webMvcConfigureTest.web.constant.variable;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.el.VariableMapper;
-import org.springframework.expression.spel.ast.VariableReference;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
-import javax.lang.model.element.VariableElement;
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.List;
@@ -31,22 +31,12 @@ public class DataController {
 
         Map<String, Object> map = objectMapper.convertValue(data, LinkedHashMap.class);
 
-        /* java.util.LinkedHashMap */
-        /* java.util.ArrayList */
         StringBuilder sb = new StringBuilder();
         map.forEach( (String key, Object value) -> {
-
             dfs(value, sb);
-
-//            sb.append(value);
         });
+
         System.out.println(sb);
-//        StringBuilder sb = new StringBuilder();
-
-
-
-//        System.out.println("sb => " + sb);
-
         return ResponseEntity.ok(data);
     }
 
